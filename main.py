@@ -4,7 +4,7 @@ import phonebook
 
 number = -1
 phonebook.initialization()
-while number!=0:
+while number != 0:
     number = menu.view()
     if number == 1:
         phonebook.show()

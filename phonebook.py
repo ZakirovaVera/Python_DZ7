@@ -3,24 +3,26 @@ import json_data_provider as json
 
 data = 0
 
+
 def initialization():
     global data
     data = csv.read_file()
 
+
 def show():
     for i, item in enumerate(data):
-        item_str= str(item).translate({ord(i): None for i in '{' '}' '\''})
+        item_str = str(item).translate({ord(i): None for i in '{' '}' '\''})
         print(f'{i}. {item_str}')
 
 
 def new_record():
     global data
     new_row = {
-                'Фамилия': input("Введите фамилию: "),
-                'Имя': input("Введите имя: "),
-                'Тел.': input("Введите телефон: "),
-                'Описание': input("Введите описание: ")
-            }
+        'Фамилия': input("Введите фамилию: "),
+        'Имя': input("Введите имя: "),
+        'Тел.': input("Введите телефон: "),
+        'Описание': input("Введите описание: ")
+    }
     data.append(new_row)
 
 
