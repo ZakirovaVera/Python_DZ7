@@ -17,6 +17,7 @@ def read_file():
                 'Описание': row[3]
                 } for row in file_reader
                 ]
+    r_file.close()
     return data
 
 
@@ -30,3 +31,4 @@ def write_in_file(data):
                                      lineterminator="\r", fieldnames=names)
         for i in data:
             file_writer.writerow(i)
+    w_file.close()
