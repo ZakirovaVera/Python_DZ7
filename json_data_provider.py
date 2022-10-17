@@ -9,4 +9,4 @@ def read_file():
 
 def write_in_file(data):
     with open("data_file.json", "w", encoding='utf8') as write_file:
-        json.dump(data, write_file, ensure_ascii=False)
+        json.dump(data, write_file, ensure_ascii=False, indent=4)
